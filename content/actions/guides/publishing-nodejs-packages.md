@@ -87,7 +87,7 @@ always-auth=true
 
 Each time you create a new release, you can trigger a workflow to publish your package. The workflow in the example below runs anytime the `release` event with type `created` occurs. The workflow publishes the package to {% data variables.product.prodname_registry %} if CI tests pass.
 
-By default, {% data variables.product.prodname_registry %} publishes a package in the {% data variables.product.prodname_dotcom %} repository you specify in the `name` field of the *package.json* file. For example, you would publish a package named `@my-org/test` to the `my-org/test` {% data variables.product.prodname_dotcom %} repository. For more information, see [`npm-scope`](https://docs.npmjs.com/misc/scope) in the npm documentation.
+By default, {% data variables.product.prodname_registry %} publishes a package in the {% data variables.product.prodname_dotcom %} repository you specify in the `repository` field of the *package.json* file. For example, you would publish a package named `@my-org/test` to the `my-org/test` {% data variables.product.prodname_dotcom %} repository. For more information, see [`npm-scope`](https://docs.npmjs.com/misc/scope) in the npm documentation.
 
 To perform authenticated operations against the {% data variables.product.prodname_registry %} registry in your workflow, you can use the `GITHUB_TOKEN`. The `GITHUB_TOKEN` exists in your repository by default and has read and write permissions for packages in the repository where the workflow runs. For more information, see "[Creating and using encrypted secrets](/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets)."
 
